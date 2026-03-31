@@ -3,325 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/styles/styles.css"> 
-   
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
-    <script src="src/javascript/script.js"></script>
+    <title>Laura Olivares | Especialista em Realidade Aumentada</title>
     
-    <title>Springlo-tech</title>
-    <meta name="description" content="Explore livro com tecnologia em Realidade Aumentada, recursos educacionais para crianças, professores e adultos">
-    <meta name="keywords" content="livro-realidade-aumentada, tecnologia, livro interativo, animacoes 3D">
-    <meta name="author" content = "Springlo-Tech">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-</head>
-
-<script>
-  $(document).ready(function() {
-    // Oculta todas as seções ao carregar
-    $('#sobre-livro, #como-funciona, #sobre-loja').hide();
-
-    // Função para esconder todas e mostrar a desejada
-    function mostrarSecao(secaoID) {
-      $('#sobre-livro, #como-funciona, #sobre-loja').hide();
-      $(secaoID).fadeIn();
-    }
-    function ocultaInicial(){
-      $('#inicio, #contato').hide();
-      
-    }
-    function ocultaContato(){
-      $('#sobre-contato').hide();
-      
-    }
-    
-
-    // Detecta clique nos itens do menu
-    $('a[href="#inicio"]').click(function(e) {
-        $('#sobre-livro, #como-funciona, #sobre-loja').hide();
-        $('#inicio').fadeIn();
-        
-        
-    });
-    
-    $('a[href="#sobre-livro"]').click(function(e) {
-      e.preventDefault();
-      mostrarSecao('#sobre-livro');
-      ocultaInicial();
-      ocultaContato();
-      
-    });
-
-    $('a[href="#como-funciona"]').click(function(e) {
-      e.preventDefault();
-      mostrarSecao('#como-funciona');
-      ocultaInicial();
-      ocultaContato();
-
-    });
-
-    $('a[href="#sobre-loja"]').click(function(e) {
-      e.preventDefault();
-      mostrarSecao('#sobre-loja');
-      ocultaInicial();
-      ocultaContato();
-    });
-    $('a[href="#contato"]').click(function(e) {
-      e.preventDefault();
-      mostrarSecao('#sobre-contato');
-    
-    });
-
-    // Opcional: mostrar a seção correspondente se a URL já tiver um hash
-    const hash = window.location.hash;
-    if (hash) {
-      mostrarSecao(hash);
-    }
-  });
-</script>
-<body>
-   <header>
-    <nav id="navbar">
-        <i class="" id="">  <img src="src/images/icone-logo.png" alt=""></i>
-      
-        <ul id="nav_list">
-          <li class="nav-item active">
-            <a href="#inicio">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sobre-livro">Sobre o Livro</a>
-          </li>
-          <li class="nav-item ">
-            <a href="#como-funciona">Como Funciona</a>
-          </li>
-          <li class="nav-item">
-            <a href="#sobre-loja">Loja</a>
-          </li>
-          <li class="nav-item ">
-            <a href="#contato">Contato</a>
-          </li>
-         
-        </ul>
-        
-        <button id="mobile_btn">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </nav>
-    <div id="mobile_menu">
-        <ul id="mobile_nav_list">
-            <li class="nav-item">
-              <a href="#inicio">Inicio</a>
-            </li>
-           
-            <li class="nav-item">
-              <a href="#sobre-livro">Sobre o Livro</a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#como-funciona">Como Funciona</a>
-            </li>
-            <li class="nav-item">
-                <a href="#sobre-loja">Loja</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contato">Contato</a>
-              </li>
-          </ul>
-         
-    </div>
-   </header>
-   
-
-   <main id="content">
-    
-   
-    <div id="banner_Capa">
-        <img src="src/images/banner.png" alt="livro infantil, interativo, inovador">
-    </div>
-
-    <section id="inicio">
-        <div class="shape"></div>
-        <div id="cta">
-
-            <h1 class="title">
-                O que é Realidade Aumentada?
-              
-            </h1>
-            <h2 class="subtitle">
-                Realidade Aumentada (RA) é uma tecnologia que combina elementos virtuais com o mundo real em tempo real.
-                A RA sobrepõe gráficos, sons e outras informações em nossa visão do mundo físico.
-            </h2>
-            <class="description">
-                
-                <p>
-                    Nossos aplicativos estão disponíveis gratuitamente na Google Play Store.
-                    É só baixar, abrir o app e apontar a câmera do celular para um dos nossos produtos.    
-                </p>
-          
-        </div>
-        <div id="banner">
-            <img src="src/images/capa_realidade_aumentada.png" alt="livro infantil, interativo, inovador">
-        </div>
-
-    </section>
-        
-    <section id="sobre-livro">
-        <img src="src/images/realidade-aumentada-capa.png" id="sobre-livro-capa"  alt="livro infantil, realidade aumentada, tecnologia, interativo, educação">
-        <div id="sobre-livro-content">
-
-            <h2 class="section-title">
-                "Bem-vindo à história de Tico!"
-            </h2>
-            <br>
-
-            <class="description">
-                
-            <p>
-                Neste livro, você vai conhecer Tico, um pequeno coelho com um grande sonho. Ele vive numa floresta tranquila com seus pais e ajuda na plantação de cenouras, as mais saborosas de todas! Mas Tico está prestes a embarcar numa aventura incrível. Prepare-se para voar nas asas de um sonho e descobrir como até mesmo o menor dos coelhinhos pode alcançar o topo das montanhas quando acredita em si mesmo.
-                Vamos decolar juntos nesta emocionante jornada!"
-            </p>
-
-        </div>
-       
-
-    </section>
-
-    <section id="como-funciona">
-        <h2 class="section-title">Como Funciona </h2>
-        <br>
-        <div class="como-funciona-imagens-container">
-          <div class="como-funciona-container">
-            <img src="src/images/como-funciona-1.jpg" id="como-funciona-quadro" alt="como-funciona-1">
-          </div>
-          <div class="como-funciona-container">
-            <img src="src/images/como-funciona-2.jpg" id="como-funciona-quadro" alt="como-funciona-2">
-          </div>
-          <div class="como-funciona-container">
-            <img src="src/images/como-funciona-3.jpg" id="como-funciona-quadro" alt="como-funciona-3">
-          </div>
-          <div class="como-funciona-container">
-            <img src="src/images/como-funciona-4.jpg" id="como-funciona-quadro" alt="como-funciona-4">
-          </div>
-        </div>
-      </section>
-
-    <section id="sobre-loja">
-
-        <div class="sobre-loja-container">
-            <img src="src/images/livro-uiclap.jpg" id="sobre-loja-uiclap" alt="sobre-loja-uiclap">
-            <a href="https://loja.uiclap.com/titulo/ua75581/" style="background-color:#007bff; color:white; padding:10px 20px;
-             text-decoration:none; border-radius:5px; display:inline-block; font-size:16px;" target="_blank">Compre Aqui</a>
-        </div>
-      
-
-    </section>
-
-    
-    <section id="sobre-contato">
-        <div id="sobre-contato-content">
-          <h2 class="section-title">Formulário de Contato</h2>
-      
-          <div id="feedbacks-contato">
-            <div class="feedback-loja">
-              <div class="feedback-contato-content">
-                <form
-                  action="https://formsubmit.co/ajax/springlo1318@gmail.com"
-                  method="POST"
-                  class="form"
-                  data-form
-                >
-                  <label for="nome">Nome</label>
-                  <input type="text" name="nome" id="nome" required />
-      
-                  <label for="email">E-mail</label>
-                  <input type="email" name="email" id="email" required />
-      
-                  <label for="mensagem">Mensagem</label>
-                  <textarea name="mensagem" id="mensagem" required></textarea>
-      
-                  <input type="hidden" name="_captcha" value="false" />
-      
-                  <button type="submit" data-button>Enviar</button>
-                  <div class="form-message" id="form-message"></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    
-    
-   </main>
-   <footer>
-    <div id="footer_items">
-        <span id="copyright">
-            &copy 2024
-        </span>
-        <a class="btprivacidade" href="politicaprivacidade.html"> Política de Privacidade</a>
-    </div>
-    
-   </footer>
-
-   <script>
-    class FormSubmit {
-      constructor(settings) {
-        this.form = document.querySelector(settings.form);
-        this.button = this.form.querySelector(settings.button);
-        this.messageBox = this.form.querySelector("#form-message");
-        this.settings = settings;
-  
-        this.sendForm = this.sendForm.bind(this);
-        this.form.addEventListener("submit", this.sendForm);
-      }
-  
-      showMessage(text, type) {
-        this.messageBox.textContent = text;
-        this.messageBox.className = `form-message ${type}`;
-      }
-  
-      async sendForm(event) {
-        event.preventDefault();
-        this.button.disabled = true;
-        this.button.innerText = "Enviando...";
-  
-        const formData = new FormData(this.form);
-  
-        try {
-          const response = await fetch(this.form.action, {
-            method: "POST",
-            headers: {
-              Accept: "application/json"
-            },
-            body: formData
-          });
-  
-          if (response.ok) {
-            this.form.reset();
-            this.showMessage(this.settings.success, "success");
-          } else {
-            this.showMessage(this.settings.error, "error");
-          }
-        } catch (error) {
-          this.showMessage(this.settings.error, "error");
-        } finally {
-          this.button.disabled = false;
-          this.button.innerText = "Enviar";
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --success-color: #27ae60;
+            --bg-light: #f4f7f6;
         }
-      }
-    }
-  
-    new FormSubmit({
-      form: "[data-form]",
-      button: "[data-button]",
-      success: "Email enviado com sucesso !",
-      error: "Ocorreu um erro. Tente novamente."
-    });
-  </script>
-  
-</body>
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg-light); color: #333; line-height: 1.6; }
+        
+        header { background: var(--primary-color); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
+        header p { font-size: 1.2rem; margin-top: 10px; color: #bdc3c7; }
+
+        nav { background: #fff; padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
+        nav a:hover { color: var(--accent-color); }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+        .intro-card { background: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--accent-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        
+        .badge { display: inline-block; padding: 4px 12px; background: #ebf5fb; color: var(--accent-color); border-radius: 15px; font-size: 0.85rem; font-weight: bold; margin: 10px 0; }
+        
+        .btn { display: inline-block; margin-top: auto; padding: 12px; background: var(--success-color); color: white; text-decoration: none; border-radius: 6px; text-align: center; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #219150; }
+
+        .social-links { margin-top: 20px; display: flex; gap: 15px; justify-content: center; }
+        .social-links a { color: white; font-size: 1.5rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent-color); }
+
+        footer { text-align: center; padding: 40px; background: #eee; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Laura Olivares</h1>
+    <p>Desenvolvedora de Realidade Aumentada | Unity | WebAR | Blender</p>
+    <p>Unity • AR Foundation • WebAR • Blender • C#</p>
+    <p>Disponível para projetos remotos nacionais e internacionais</p>
+    <p><strong>Aberta para vagas Unity, WebAR e Realidade Aumentada</strong></p>
+    <div class="social-links">
+        <a href="https://github.com/SEU-USUARIO" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/SEU-PERFIL" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com/springlo_tech" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#portfolio">Portfólio AR</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+    
+    <section id="sobre" class="intro-card">
+        <h2>Desenvolvedora de Realidade Aumentada</h2>
+        <p>Analista de Sistemas com 15 anos de experiência em tecnologia, atualmente focada no desenvolvimento de soluções em Realidade Aumentada utilizando Unity, WebAR e modelagem 3D. Através da Springlo Tech, marca que criei para consolidar meus projetos autorais, domino o pipeline completo de Realidade Aumentada: da modelagem técnica no Blender à implementação lógica em Unity (C#) e soluções leves para WebAR.</p>
+        <p><strong>Meu foco:</strong> Criação de manuais técnicos interativos, livros educacionais e digitalização de ativos industriais para experiências imersivas.</p>
+    </section>
+
+    <section class="intro-card">
+    <h2>Tecnologias</h2>
+
+    <p>
+      Unity • AR Foundation • WebAR • MindAR • Blender • C# • 
+      Image Tracking • Modelagem 3D • UX Interativo
+    </p>
+
+</section>
+    
+
+    <h2 id="portfolio" style="text-align: center; margin-bottom: 30px;">Projetos em Destaque</h2>
+
+    <div class="grid">
+
+        <div class="card">
+           <span class="badge">Varejo</span>
+           <h3>Visualização de Móveis em Realidade Aumentada (AR)</h3>
+           <p>Aplicação de Realidade Aumentada para visualização de móveis em escala real.</p>
+           <p>O usuário pode posicionar e rotacionar modelos 3D no ambiente real, além de alternar entre diferentes opções de cadeiras através de interface com botões.</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    
+                    src="https://www.youtube.com/embed/8t8gFoXUnHw"
+                
+                    title="Manual Interativo AR" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+             <p><small>Tecnologias: Unity, AR Foundation(Plane Tracking) , Blender.</small></p>
+        </div>
+
+        <div class="card">
+           <span class="badge">Indústria</span>
+           <h3>Manual de Montagem Interativo</h3>
+           <p>Protótipo de manual técnico em Realidade Aumentada</p>
+           <p>A aplicação permite visualizar a cadeira montada, explorar a montagem em vista "explodida" e acessar informações técnicas através de interface interativa com botões.</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/DDwjUeCD8tE"
+                   
+                    title="Manual Interativo AR" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+             <p><small>Tecnologias: Mindar, WebAR e Blender.</small></p>
+        </div>
+    
+        <div class="card">
+           <span class="badge">Educação </span>
+           <h3>Livro "Tico e seu Sonho"</h3>
+           <p>Publicação autoral que utiliza Realidade Aumentada para dar vida à narrativa infantil, proporcionando uma experiência interativa e imersiva.</p>
+           <p>Cada página do livro ativa cenários em 3D com animações e efeitos sonoros ao apontar a câmera do celular.</p>
+           <p>O projeto conta com 20 páginas interativas e aplicativo disponível na Play Store e livro físico disponível na UICLAP</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/vuOk_IFHnEE" 
+                    title="Demonstração Livro Tico" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+    
+             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                  <a href="https://play.google.com/store/apps/details?id=com.SpringloTech.TicoAR" class="btn" style="background:#4285F4; flex:1" target="_blank">Play Store</a>
+                  <a href="https://loja.uiclap.com/titulo/ua75581/" class="btn" style="background:#f39c12; flex:1" target="_blank">Ver Livro</a>
+             </div>
+             <p><small>Tecnologias: Unity, AR Foundation(Image Tracking) e Blender.</small></p>
+        </div>       
+    </div>
+
+    <section id="contato" style="margin-top: 60px;">
+        <div class="intro-card" style="border-left-color: var(--success-color);">
+            <h2 style="text-align:center">Vamos desenvolver o futuro juntos?</h2>
+            <p style="text-align:center">Disponível para projetos de consultoria em AR e vagas remotas.</p>
+            
+            <form action="https://formsubmit.co/ajax/springlo1318@gmail.com" method="POST" data-form style="display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: auto;">
+                <input type="text" name="nome" placeholder="Seu Nome" required style="padding:12px; border-radius:5px; border:1px solid #ccc;">
+                <input type="email" name="email" placeholder="Seu E-mail" required style="padding:12px; border-radius:5px; border:1px solid #ccc;">
+                <textarea name="mensagem" placeholder="Descreva seu projeto ou proposta..." required style="padding:12px; border-radius:5px; border:1px solid #ccc; height: 100px;"></textarea>
+                <button type="submit" data-button class="btn" style="border:none; cursor:pointer; font-size: 1.1rem;">Enviar Mensagem</button>
+                <div id="form-message" style="text-align:center; margin-top:10px;"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+       <p>&copy; 2026 Laura Olivares | Springlo Tech</p>
+       <a class="btprivacidade" href="politicaprivacidade.html"> Política de Privacidade</a>
+      
+    </footer>
+
+    </body>
 </html>
