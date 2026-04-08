@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Olivares | Augmented Reality Specialist</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --success-color: #27ae60;
+            --bg-light: #f4f7f6;
+        }
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg-light); color: #333; line-height: 1.6; }
+        
+        header { background: var(--primary-color); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
+        header p { font-size: 1.2rem; margin-top: 10px; color: #bdc3c7; }
+
+        nav { background: #fff; padding: 1rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary-color); font-weight: bold; }
+        nav a:hover { color: var(--accent-color); }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+
+        .intro-card { background: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; border-left: 8px solid var(--accent-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+        
+        .badge { display: inline-block; padding: 4px 12px; background: #ebf5fb; color: var(--accent-color); border-radius: 15px; font-size: 0.85rem; font-weight: bold; margin: 10px 0; }
+        
+        .btn { display: inline-block; margin-top: auto; padding: 12px; background: var(--success-color); color: white; text-decoration: none; border-radius: 6px; text-align: center; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #219150; }
+
+        .social-links { margin-top: 20px; display: flex; gap: 15px; justify-content: center; }
+        .social-links a { color: white; font-size: 1.5rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent-color); }
+
+        footer { text-align: center; padding: 40px; background: #eee; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Laura Olivares</h1>
+    <p>Augmented Reality Developer | Unity | WebAR | Blender</p>
+    <p>Unity • AR Foundation • WebAR • Blender • C#</p>
+    <p>Available for remote projects</p>
+    <p><strong>Open to Unity, WebAR, and Augmented Reality roles</strong></p>
+    <div class="social-links">
+        <a href="https://github.com/Springlo-tech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/springlo_tech/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="/" title="Português" style="font-size: 1rem; vertical-align: middle; margin-left: 10px;">PT-BR</a>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">AR Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    
+    <section id="about" class="intro-card">
+        <h2>Augmented Reality Developer</h2>
+        <p>Senior Systems Analyst with 18 years of experience, currently specializing in Augmented Reality and 3D modeling. Through Springlo Tech, a brand I created to consolidate my original projects, I master the complete AR pipeline: from technical modeling in Blender to logic implementation in Unity (C#) and lightweight WebAR solutions.</p>
+        <p><strong>My Focus:</strong> Creating interactive technical manuals, educational books, and digitizing industrial assets for immersive experiences.</p>
+    </section>
+
+    <section class="intro-card">
+        <h2>Technologies</h2>
+        <p>
+          Unity • AR Foundation • WebAR • MindAR • Blender • C# • 
+          Image Tracking • 3D Modeling • Interactive UX
+        </p>
+    </section>
+    
+    <h2 id="portfolio" style="text-align: center; margin-bottom: 30px;">Featured Projects</h2>
+
+    <div class="grid">
+
+        <div class="card">
+           <span class="badge">Retail</span>
+           <h3>Furniture Visualization in Augmented Reality (AR)</h3>
+           <p>Augmented Reality application for real-scale furniture visualization.</p>
+           <p>Users can position and rotate 3D models in a real environment and switch between different chair options via an interactive button interface.</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/8t8gFoXUnHw"
+                    title="AR Interactive Manual" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+             <p><small>Technologies: Unity, AR Foundation (Plane Tracking), Blender.</small></p>
+        </div>
+
+        <div class="card">
+           <span class="badge">Industry</span>
+           <h3>Interactive Assembly Manual</h3>
+           <p>Prototype of a technical manual in Augmented Reality.</p>
+           <p>The application allows users to view the assembled product, explore the assembly in an "exploded view," and access technical information through an interactive UI.</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/DDwjUeCD8tE"
+                    title="AR Interactive Manual" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+             <p><small>Technologies: MindAR, WebAR, and Blender.</small></p>
+        </div>
+    
+        <div class="card">
+           <span class="badge">Education</span>
+           <h3>"Tico e seu Sonho" Book</h3>
+           <p>Original publication using Augmented Reality to bring children's narratives to life, providing an interactive and immersive experience.</p>
+           <p>Each page activates 3D scenarios with animations and sound effects when pointing the phone's camera.</p>
+           <p>The project features 20 interactive pages, an app available on the Play Store, and a physical book available via UICLAP.</p>
+    
+             <div class="video-container" style="position: relative; padding-bottom: 177.77%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/vuOk_IFHnEE" 
+                    title="Tico Book Demo" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+             </div>
+    
+             <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                  <a href="https://play.google.com/store/apps/details?id=com.SpringloTech.TicoAR" class="btn" style="background:#4285F4; flex:1" target="_blank">Play Store</a>
+                  <a href="https://loja.uiclap.com/titulo/ua75581/" class="btn" style="background:#f39c12; flex:1" target="_blank">View Book</a>
+             </div>
+             <p><small>Technologies: Unity, AR Foundation (Image Tracking), and Blender.</small></p>
+        </div>       
+    </div>
+
+    <section id="contact" style="margin-top: 60px;">
+        <div class="intro-card" style="border-left-color: var(--success-color);">
+            <h2 style="text-align:center">Let's build the future together?</h2>
+            <p style="text-align:center">Available for AR consulting projects and remote positions.</p>
+            
+            <form action="https://formsubmit.co/ajax/springlo1318@gmail.com" method="POST" data-form style="display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: auto;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding:12px; border-radius:5px; border:1px solid #ccc;">
+                <input type="email" name="email" placeholder="Your Email" required style="padding:12px; border-radius:5px; border:1px solid #ccc;">
+                <textarea name="message" placeholder="Describe your project or proposal..." required style="padding:12px; border-radius:5px; border:1px solid #ccc; height: 100px;"></textarea>
+                <button type="submit" data-button class="btn" style="border:none; cursor:pointer; font-size: 1.1rem;">Send Message</button>
+                <div id="form-message" style="text-align:center; margin-top:10px;"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+       <p>&copy; 2026 Laura Olivares | Springlo Tech</p>
+       <a class="btprivacidade" href="../en/privacy-policy.html"> Privacy Policy</a>
+    </footer>
+
+    </body>
+</html>
